@@ -1,16 +1,18 @@
 import { useDispatch, useSelector } from "react-redux";
 import Counter from "./components/Counter";
 import Stats from "./components/Stats";
-import { decrement, increment } from "../features/counters/counterSlice";
-
+// import { decrement, increment } from "../features/counters2/counterSlice";
+import { decrement, increment } from "../features/counters2/counterSlice2"
 
 export default function App() {
 
-  const counters = useSelector((state) => state.counters)
+  // const counters = useSelector((state) => state.counters)
+  // const dispatch = useDispatch();
+
+  const counters2 = useSelector((state) => state.counters)
   const dispatch = useDispatch();
 
-
-  const totalCount = counters.reduce(
+  const totalCount = counters2.reduce(
     (sum, current) => sum + current.value, 0
   )
 
@@ -26,7 +28,7 @@ export default function App() {
     <div className="w-screen h-screen p-10 bg-gray-100 text-slate-700">
       <h1 className="max-w-md mx-auto text-center text-2xl font-bold">Simple Counter Application</h1>
       <div className="max-w-md mx-auto mt-10 space-y-5">
-        {counters.map((counter) => (
+        {counters2.map((counter) => (
           <Counter
             key={counter?.id}
             count={counter?.value}
