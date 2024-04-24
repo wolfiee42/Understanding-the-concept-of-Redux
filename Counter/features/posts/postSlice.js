@@ -14,11 +14,11 @@ export const fetchPosts = createAsyncThunk("posts/fetchposts", async () => {
 });
 
 const postSlice = createSlice({
-  name: "post",
+  name: "posts",
   initialState,
   // for async functionality redux provide us another reducer named extraReducer, which handles promises. extraReducer func has a parameter named builder which handle promises. promises has 3 different state.
-  // 1. the promise is called
-  // 2. the promise is pending
+  // 1. the promise is called.
+  // 2. the promise is pending.
   // 3. the promise is rejected.
   extraReducers: (builder) => {
     builder
@@ -38,4 +38,4 @@ const postSlice = createSlice({
   },
 });
 
-export default postSlice;
+export default postSlice.reducer;

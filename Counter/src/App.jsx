@@ -3,6 +3,7 @@ import Counter from "./components/Counter";
 import Stats from "./components/Stats";
 // import { decrement, increment } from "../features/counters2/counterSlice";
 import { decrement, increment } from "../features/counters2/counterSlice2"
+import Post from "./components/Post";
 
 export default function App() {
 
@@ -37,6 +38,7 @@ export default function App() {
           />
         ))}
         <Stats totalCount={totalCount} />
+        <Post />
       </div>
     </div>
   )
