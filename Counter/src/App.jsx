@@ -1,15 +1,10 @@
 import { useDispatch, useSelector } from "react-redux";
 import Counter from "./components/Counter";
 import Stats from "./components/Stats";
-// import { decrement, increment } from "../features/counters2/counterSlice";
 import { decrement, increment } from "../features/counters2/counterSlice2"
-import Post from "./components/Post";
 import Post23 from "./components/Post23";
 
 export default function App() {
-
-  // const counters = useSelector((state) => state.counters)
-  // const dispatch = useDispatch();
 
   const counters2 = useSelector((state) => state.counters)
   const dispatch = useDispatch();
